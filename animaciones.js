@@ -31,22 +31,23 @@ $(document).ready(() => {
     var animate = $("#accordion").accordion("option", "animate");
 
     $("#accordion").accordion("option", "animate", 200);
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        effect: "fade",
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+    var input = document.querySelector('#options-autoplay-input')
+
+    new Glider(document.querySelector('.carousel__lista'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: '.carousel__indicadores',
+        arrows: {
+            prev: '.carousel__anterior',
+            next: '.carousel__siguiente'
         },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
+        responsive: [{
+            // screens greater than >= 1024px
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        }]
     });
 });
