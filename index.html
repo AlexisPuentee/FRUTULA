@@ -8,13 +8,12 @@
     <meta name="description" content="Tienda de verduras y frutas" />
     <title>FRUTULA</title>
     <!--!Estilos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <!--!JS-->
     <script src="jquery-3.6.0.min.js"></script>
     <script src="jquery-ui-1.13.0/jquery-ui.min.js"></script>
     <script src="animaciones.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -33,7 +32,7 @@
                         <a href="index.html">Frutas</a>
                     </li>
                     <li>
-                        <a href="index.html">Zonas de alcance</a>
+                        <a href="index.html">Zonas de alcanze</a>
                     </li>
                     <li>
                         <a href="index.html">Contactos</a>
@@ -47,25 +46,38 @@
         </header>
         <!--!-----------------------Carrusel------------------------------>
 
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="img_caru uno" src="imagenes/sembradiopared.jpg" alt="huerto" />
+        <div class="carousel">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior"></button>
+
+                <div class="carousel__lista">
+                    <div class="carousel__elemento">
+                        <img src="imagenes/waves_logo.png" alt="Rock and Roll Hall of Fame" />
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="imagenes/waves_logo.png" alt="Constitution Square - Tower I" />
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="imagenes/waves_logo.png" alt="Empire State Building" />
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="imagenes/waves_logo.png" alt="Harmony Tower" />
+                    </div>
+
+                    <div class="carousel__elemento">
+                        <img src="imagenes/waves_logo.png" alt="Empire State Building" />
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img class="img_caru" src="imagenes/huerto_urbano_2.png" alt="huerto" />
-                </div>
-                <div class="swiper-slide">
-                    <img class="img_caru" src="imagenes/sembradiopared.jpg" alt="huerto" />
-                </div>
+
+                <button aria-label="Siguiente" class="carousel__siguiente"></button>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+
+            <div role="tablist" class="carousel__indicadores"></div>
         </div>
         <!--!-----------------------Categorias------------------------------>
         <div class="container_categories">
             <div class="categories_sub">
-                <img class="categorias_img" src="imagenes/verduras.webp" alt="Verduras" />
+                <img class="categorias_img" src="imagenes/verduras.png" alt="Verduras" />
                 <h1 class="categorias_titulos">Verduras</h1>
             </div>
 
@@ -82,125 +94,111 @@
         <!--!---------------Categorias mas populares----------------------->
         <div class="container_acordion">
             <div id="accordion">
-                <h3>Más Popular</h3>
+                <h3>Lo mas Popular</h3>
                 <div class="container_categorie aqui">
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Platano</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Uva verde</h1>
+                        <img class="categoria_img" src="imagenes/Verduras/Aguacate.png" alt="Aguacate" />
+                        <h4 class="categoria_titulos">Aguacate</h4>
                     </div>
 
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Guayaba</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                </div>
-                <h3>Selección de la Casa</h3>
-                <div class="container_categorie aqui">
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Verduras/Limones.png" alt="Limon" />
+                        <h4 class="categoria_titulos">Limón</h4>
                     </div>
 
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Verduras/Tomate.png" alt="Tomate" />
+                        <h4 class="categoria_titulos">Tomate</h4>
                     </div>
+
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Frutas/Manzana.png" alt="Manzana" />
+                        <h4 class="categoria_titulos">Manzana</h4>
                     </div>
+
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Frutas/Pina.png" alt="Piña" />
+                        <h4 class="categoria_titulos">Piña</h4>
                     </div>
+
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Frutas/Platano.png" alt="Platano" />
+                        <h4 class="categoria_titulos">Platano</h4>
                     </div>
+
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Frutas/Sandia.png" alt="Sandía" />
+                        <h4 class="categoria_titulos">Sandía</h4>
+                    </div>
+
+                    <div class="categorie_sub">
+                        <img class="categoria_img" src="imagenes/Frutas/Uva.png" alt="Uva verde" />
+                        <h4 class="categoria_titulos">Uva verde</h4>
                     </div>
                 </div>
+
+                <h3>Seleccion de la Casa</h3>
+                <div class="container_categorie aqui">
+                    <div class="categorie_sub">
+                        <img class="categoria_img" src="imagenes/Verduras/Aguacate.png" alt="Aguacate" />
+                        <h4 class="categoria_titulos">Aguacate</h4>
+                    </div>
+
+                    <div class="categorie_sub">
+                        <img class="categoria_img" src="imagenes/Verduras/Limones.png" alt="Limon" />
+                        <h4 class="categoria_titulos">Limón</h4>
+                    </div>
+
+                    <div class="categorie_sub">
+                        <img class="categoria_img" src="imagenes/Verduras/Tomate.png" alt="Tomate" />
+                        <h4 class="categoria_titulos">Tomate</h4>
+                    </div>
+
+                    <div class="categorie_sub">
+                        <img class="categoria_img" src="imagenes/Frutas/Manzana.png" alt="Manzana" />
+                        <h4 class="categoria_titulos">Manzana</h4>
+                    </div>
+
+                    <div class="categorie_sub">
+                        <img class="categoria_img" src="imagenes/Frutas/Pina.png" alt="Piña" />
+                        <h4 class="categoria_titulos">Piña</h4>
+                    </div>
+                </div>
+
                 <h3>Ofertas</h3>
                 <div class="container_categorie aqui">
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Verduras/Aguacate.png" alt="Aguacate" />
+                        <h4 class="categoria_titulos">Aguacate</h4>
                     </div>
 
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Verduras/Limones.png" alt="Limon" />
+                        <h4 class="categoria_titulos">Limón</h4>
                     </div>
+
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Frutas/Manzana.png" alt="Manzana" />
+                        <h4 class="categoria_titulos">Manzana</h4>
                     </div>
+
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.png" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.png" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Frutas/Pina.png" alt="Piña" />
+                        <h4 class="categoria_titulos">Piña</h4>
                     </div>
                 </div>
+
                 <h3>Proximamente</h3>
                 <div class="container_categorie aqui">
                     <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
-                    </div>
-                    <div class="categorie_sub">
-                        <img class="categoria_img" src="imagenes/verduras.webp" alt="Verduras" />
-                        <h1 class="categoria_titulos">Verduras</h1>
+                        <img class="categoria_img" src="imagenes/Verduras/Aguacate.png" alt="Aguacate" />
+                        <h4 class="categoria_titulos">Aguacate</h4>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
 </body>
 
 </html>
