@@ -28,11 +28,11 @@ header {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
     padding: 1vw 2vw;
 }
 
@@ -95,8 +95,8 @@ ul.show {
 }
 
 .disminucion_logo {
-    animation: loog 2s;
-    -webkit-animation: loog 2s;
+    animation: loog 1s;
+    -webkit-animation: loog 1s;
     animation-fill-mode: both;
 }
 
@@ -166,27 +166,48 @@ ul.show {
 
 /**-------------------Carrusel-------------------*/
 
-.swiper {
-    width: 100%;
-    margin-bottom: 15px;
+.carousel__contenedor {
+    position: relative;
 }
 
-.swiper-slide {
-    background-position: center;
-    background-size: absolute;
+.carousel__lista {
+    overflow: hidden;
 }
 
-.swiper-slide img {
+.carousel__elemento {
+    text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
     display: block;
-    width: 100%;
+    width: 60px;
+    height: 5px;
+    background: #fff;
+    opacity: 0.2;
+    border-radius: 0;
 }
 
-.img_caru {
-    height: 70vh;
+.carousel__indicadores .glider-dot:hover {
+    opacity: 0.5;
 }
 
-.titulo {
-    margin-right: 50px;
+.carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    background: black;
+    opacity: 10%;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 
 
@@ -290,9 +311,9 @@ ul.show {
 
 .container_categorie {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 45px;
-    padding: 30px 10vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    padding: 30px 5vw;
     overflow: auto;
     height: 50vh !important;
     box-sizing: content-box;
@@ -308,14 +329,16 @@ ul.show {
     box-shadow: 3px 4px 3px 0px rgba(109, 109, 109, 0.481);
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 40vh;
+    width: 20vw;
     margin: auto;
     cursor: pointer;
 }
 
 .categoria_img {
-    max-width: 80%;
-    margin: 2vh auto 5vh auto;
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -328,8 +351,9 @@ ul.show {
 }
 
 .categoria_titulos {
-    color: white;
+    color: #00754a;
     text-align: center;
+    font-size: 170%;
 }
 
 
@@ -423,7 +447,7 @@ ul.show {
     }
     .categorie_sub {
         height: min-content;
-        width: 35vw;
+        width: 50vw;
         margin: auto;
     }
     .categoria_img {
@@ -445,9 +469,6 @@ ul.show {
 @media screen and (max-width: 700px) {
     .titulo {
         font-size: 5vw;
-    }
-    .img_caru {
-        height: 38vh;
     }
     .container_categories {
         display: grid;
